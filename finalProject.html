@@ -10,29 +10,30 @@
 <body>
     <button id="clear_form">Clear</button>
     <button id="print_form">Print</button>
+    <button id="download_form">Download</button>
     <form id="meal_plan_form">
         <h1>Plan your meal for the week!</h1>
         <h2>You will be eating the same thing EVERY SINGLE DAY</h2>
         <label for="breakfast">Breakfast<br></label>
-        <input type="text" name="breakfast", id="breakfast"><br><br>
+        <input type="text" name="breakfast" id="breakfast"><br><br>
         <label for="snack1">Snack 1<br></label>
-        <input type="text" name="snack1", id="snack1"><br><br>
+        <input type="text" name="snack1" id="snack1"><br><br>
         <label for="lunch">Lunch<br></label>
-        <input type="text" name="lunch", id="lunch"><br><br>
+        <input type="text" name="lunch" id="lunch"><br><br>
         <label for="snack2">Snack 2<br></label>
-        <input type="text" name="snack2", id="snack2"><br><br>
+        <input type="text" name="snack2" id="snack2"><br><br>
         <label for="dinner">Dinner<br></label>
-        <input type="text" name="dinner", id="dinner"><br><br>
+        <input type="text" name="dinner" id="dinner"><br><br>
         
         <h2>Personal Data</h2>
         <label for="username">Username<br></label>
-        <input type="text" name="username", id="username"><br><br>
+        <input type="text" name="username" id="username"><br><br>
         <label for="email">Email Address<br></label>
-        <input type="text" name="email", id="email" required><br><br>
+        <input type="text" name="email" id="email" required title="Type in an email" pattern="[A-Za-z0-9._-]+@+[A-Za-z0-9-]+\.+[A-Za-z0-9]{2,}"><br><br>
         <label for="goal">What is your goal?<br></label>
-        <input type="text" name="goal", id="goal"><br><br>
+        <input type="text" name="goal" id="goal"><br><br>
         
-        <button id="generate", type="button">Generate Planner</button>
+        <button id="generate">Generate Planner</button>
     </form>
 </body>
 </html>
