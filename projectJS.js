@@ -36,6 +36,7 @@ planner_form.addEventListener('submit', function(){
 
 function buildPlanner(){
     //creates the planner website
+    let table_text = ""
     new_planner = window.open('about:blank','This Week\'s Meal Plan','width=700,height=800')
-    new_planner.document.write("hello world")
+    new_planner.document.write(`hello world<br>${table_text}`)
 }
