@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEB-115 Final Project</title>
-    <script src="projectJS.js"></script>
+    <script src="projectJS.js" defer></script>
     <img src="Graphics/meal_plan_banner_placeholder.png" width="100%">
 </head>
 <body>
@@ -28,11 +28,11 @@
         <label for="username">Username<br></label>
         <input type="text" name="username", id="username"><br><br>
         <label for="email">Email Address<br></label>
-        <input type="text" name="email", id="email"><br><br>
+        <input type="text" name="email", id="email" required><br><br>
         <label for="goal">What is your goal?<br></label>
         <input type="text" name="goal", id="goal"><br><br>
         
-        <button id="generate">Generate Planner</button>
+        <button id="generate", type="button">Generate Planner</button>
     </form>
 </body>
 </html>
