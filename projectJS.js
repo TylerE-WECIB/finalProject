@@ -11,6 +11,9 @@ let snack1 = document.getElementById("snack1")
 let lunch = document.getElementById("lunch")
 let snack2 = document.getElementById("snack2")
 let dinner = document.getElementById("dinner")
+let username = document.getElementById("username")
+let email = document.getElementById("email")
+let goal = document.getElementById("goal")
 
 //clear button functionality. clears all input field values
 clear_button.addEventListener('click',function(){
@@ -21,7 +24,7 @@ clear_button.addEventListener('click',function(){
 })
 
 print_button.addEventListener('click', function(){
-
+    print()
 })
 
 download_button.addEventListener('click', function(){
@@ -36,8 +39,10 @@ planner_form.addEventListener('submit', function(){
 
 function buildPlanner(){
     //creates the planner website
+    
+    //table where the values from the form get displayed
     let table_text = `
-    <table border = 1>
+    <table border = 2>
         <tr>
             <th></th>
             <th>Monday</th>
@@ -100,9 +105,9 @@ function buildPlanner(){
         </tr>
     </table>
     `
-    new_planner = window.open('about:blank','This Week\'s Meal Plan','width=700,height=800')
-    new_planner.document.write(`hello world<br>${table_text}`)
+    new_planner = window.open('about:blank',"Your Meal Plan",'width=700 height=800')
+    new_planner.document.write(`<head><title>Your Meal Plan</title></head><h1>Meal Plan</h1><br>${table_text}<br><br>
+        <p>Username: ${username.value}</p>
+        <p>Email Address: ${email.value}</p>
+        <p>Goal: ${goal.value}</p>`)
 }
-
-// [A-Za-z0-9._-]+@+[A-Za-z0-9-]+\.+[A-Za-z0-9]{2,}
-//regex that isn't working
