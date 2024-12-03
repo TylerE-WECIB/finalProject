@@ -95,22 +95,27 @@ function buildPlanner(){
         </tr>
     </table>
     `
+    //window that gets opened to contain the table
     new_planner = window.open('about:blank',"Your Meal Plan",'width=700 height=800')
-    new_planner.document.write(`<head><title>Your Meal Plan</title></head><h1>Meal Plan</h1><br>${table_text}<br><br>
+    new_planner.document.write(`
+        <html>
+        <head><title>Your Meal Plan</title></head>
+        <body>
+        <h1>Meal Plan</h1><br>${table_text}<br><br>
         <div id="print_button"></div>
-        <div id="download_button"></div>
         <p>Username: ${username.value}</p>
         <p>Email Address: ${email.value}</p>
-        <p>Goal: ${goal.value}</p>`)
+        <p>Goal: ${goal.value}</p>
+        </body>
+        </html>`)
     
+    //button that prints the table window upon being clicked
     let print_button = new_planner.document.createElement("button")
     print_button.id = "print"
-    print_button.onclick = testFunc
-    print_button.textContent = "Print"
-    function testFunc(){
-        new_planner.document.write("AAAAA")
-    }
+    print_button.textContent = "Print / Download"
+    print_button.setAttribute("onclick", "print()")
     new_planner.document.getElementById("print_button").appendChild(print_button)
+    
 
 }
 
