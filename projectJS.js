@@ -1,8 +1,6 @@
 //setting up elements
 let planner_form = document.getElementById("meal_plan_form")
 let clear_button = document.getElementById("clear_form")
-let print_button = document.getElementById("print_form")
-let download_button = document.getElementById("download_form")
 let generate_button = document.getElementById("generate")
 
 //input fields (surprise tool that will help us later)
@@ -21,14 +19,6 @@ clear_button.addEventListener('click',function(){
         let input_field = planner_form.getElementsByTagName("input")[i]
         input_field.value = ""
     }
-})
-
-print_button.addEventListener('click', function(){
-    print()
-})
-
-download_button.addEventListener('click', function(){
-    
 })
 
 //generates the website upon pressing the generate planner button
@@ -107,7 +97,20 @@ function buildPlanner(){
     `
     new_planner = window.open('about:blank',"Your Meal Plan",'width=700 height=800')
     new_planner.document.write(`<head><title>Your Meal Plan</title></head><h1>Meal Plan</h1><br>${table_text}<br><br>
+        <div id="print_button"></div>
+        <div id="download_button"></div>
         <p>Username: ${username.value}</p>
         <p>Email Address: ${email.value}</p>
         <p>Goal: ${goal.value}</p>`)
+    
+    let print_button = new_planner.document.createElement("button")
+    print_button.id = "print"
+    print_button.onclick = testFunc
+    print_button.textContent = "Print"
+    function testFunc(){
+        new_planner.document.write("AAAAA")
+    }
+    new_planner.document.getElementById("print_button").appendChild(print_button)
+
 }
+
