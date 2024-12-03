@@ -32,7 +32,7 @@ function buildPlanner(){
     
     //table where the values from the form get displayed
     let table_text = `
-    <table border = 2>
+    <table border = 2 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
         <tr>
             <th></th>
             <th>Monday</th>
@@ -101,11 +101,11 @@ function buildPlanner(){
         <html>
         <head><title>Your Meal Plan</title></head>
         <body>
-        <h1>Meal Plan</h1><br>${table_text}<br><br>
+        <h1 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Meal Plan</h1><br>${table_text}<br><br>
         <div id="print_button"></div>
-        <p>Username: ${username.value}</p>
-        <p>Email Address: ${email.value}</p>
-        <p>Goal: ${goal.value}</p>
+        <p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Username: ${username.value}</p>
+        <p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Email Address: ${email.value}</p>
+        <p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Goal: ${goal.value}</p>
         </body>
         </html>`)
     
