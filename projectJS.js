@@ -3,7 +3,7 @@ let planner_form = document.getElementById("meal_plan_form")
 let clear_button = document.getElementById("clear_form")
 let generate_button = document.getElementById("generate")
 
-//input fields (surprise tool that will help us later)
+//input fields. contain the data that will be used in the final planner
 let breakfast = document.getElementById("breakfast")
 let snack1 = document.getElementById("snack1")
 let lunch = document.getElementById("lunch")
@@ -23,12 +23,12 @@ clear_button.addEventListener('click',function(){
 
 //generates the website upon pressing the generate planner button
 planner_form.addEventListener('submit', function(){
-    //create the planner website when the form gets submitted
-    buildPlanner()
+    buildPlanner() //create the planner website when the form gets submitted
+
 })
 
 function buildPlanner(){
-    //creates the planner website
+    //creates the planner window
     
     //table where the values from the form get displayed
     let table_text = `
@@ -97,6 +97,8 @@ function buildPlanner(){
     `
     //window that gets opened to contain the table
     new_planner = window.open('about:blank',"Your Meal Plan",'width=700 height=800')
+    
+    //text content of the new window, including the table and additional <p> tags for user information
     new_planner.document.write(`
         <html>
         <head><title>Your Meal Plan</title></head>
